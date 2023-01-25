@@ -1,113 +1,54 @@
-# pandas-challenge
-George Washington University Project
+# Unit 4 Homework: Pandas
+
+This is an assignment that I completed for the George Washington University Data Analytics Bootcamp, focused on analysis in Python using Jupyter Notebook and displaying my understanding of Pandas.
 
 
-Using Pandas and Jupyter Notebook, create a report that includes the following data. Your report must include a written description of at least two observable trends based on the data.
+## Organization
 
-Hint: Check out the sample solution called PyCitySchools_starter.ipynb located in the .zip file to review the desired format for this assignment.
+Within "pandas-challenge" you will find this "README.md" file which provides an explanation of my analysis. You will also find the
+folder, "PyCitySchools" which contains my Python code in a Jupyter Notebook file, as well as a "Resources" folder. The "Resources"
+folder contains two documents "schools_complete.csv" and "students_complete.csv" which are used in this analysis.
 
-District Summary
-Perform the necessary calculations and then create a high-level snapshot of the district's key metrics in a DataFrame.
 
-Include the following:
+## Background
 
-Total number of unique schools
+Using Pandas and Jupyter Notebook, we have created a report that includes the Student and School data together in order to 
+gain insights into how student scores relate to a variety of school level factors:
 
-Total students
+District Summary which summarizes key metrics about each district.
 
-Total budget
-
-Average math score
-
-Average reading score
-
-% passing math (the percentage of students who passed math)
-
-% passing reading (the percentage of students who passed reading)
-
-% overall passing (the percentage of students who passed math AND reading)
-
-School Summary
-Perform the necessary calculations and then create a DataFrame that summarizes key metrics about each school.
-
-Include the following:
-
-School name
-
-School type
-
-Total students
-
-Total school budget
-
-Per student budget
-
-Average math score
-
-Average reading score
-
-% passing math (the percentage of students who passed math)
-
-% passing reading (the percentage of students who passed reading)
-
-% overall passing (the percentage of students who passed math AND reading)
+School Summary which summarizes key metrics about each school.
 
 Highest-Performing Schools (by % Overall Passing)
-Sort the schools by % Overall Passing in descending order and display the top 5 rows.
-
-Save the results in a DataFrame called "top_schools".
 
 Lowest-Performing Schools (by % Overall Passing)
-Sort the schools by % Overall Passing in ascending order and display the top 5 rows.
-
-Save the results in a DataFrame called "bottom_schools".
 
 Math Scores by Grade
-Perform the necessary calculations to create a DataFrame that lists the average math score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
 Reading Scores by Grade
-Create a DataFrame that lists the average reading score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
 Scores by School Spending
-Create a table that breaks down school performance based on average spending ranges (per student).
-
-Use the code provided below to create four bins with reasonable cutoff values to group school spending.
-
-spending_bins = [0, 585, 630, 645, 680]
-labels = ["<$585", "$585-630", "$630-645", "$645-680"]
-Use pd.cut to categorize spending based on the bins.
-
-Use the following code to then calculate mean scores per spending range.
-
-spending_math_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Math Score"]
-spending_reading_scores = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["Average Reading Score"]
-spending_passing_math = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Math"]
-spending_passing_reading = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Passing Reading"]
-overall_passing_spending = school_spending_df.groupby(["Spending Ranges (Per Student)"]).mean()["% Overall Passing"]
-Use the scores above to create a DataFrame called spending_summary.
-
-Include the following metrics in the table:
-
-Average math score
-
-Average reading score
-
-% passing math (the percentage of students who passed math)
-
-% passing reading (the percentage of students who passed reading)
-
-% overall passing (the percentage of students who passed math AND reading)
 
 Scores by School Size
-Use the following code to bin the per_school_summary.
-
-size_bins = [0, 1000, 2000, 5000]
-labels = ["Small (<1000)", "Medium (1000-2000)", "Large (2000-5000)"]
-Use pd.cut on the "Total Students" column of the per_school_summary DataFrame.
-
-Create a DataFrame called size_summary that breaks down school performance based on school size (small, medium, or large).
 
 Scores by School Type
-Use the per_school_summary DataFrame from the previous step to create a new DataFrame called type_summary.
 
-This new DataFrame should show school performance based on the "School Type".
+
+## Insights
+
+One meaningful insight that can be observed in this data is that "Large Schools" (2000-5000 students) performed noticably more
+poorly in Math Pass Rate (69.96%) than smaller schools (93.60%) and (93.55%). And there is a similar, though less pronounced
+decrease in Reading Pass Rate for "Large Schools"(82.77%) compared to smaller schools (96.79%) and (96.10%). Together, these
+disparities were amplified in the Overall Pass Rate to produce 58.28% for Large Schools and 90.62% and 89.88 for smaller schools.
+This suggests that students in schools over 2000 students have a disadvantage compared to their peers in smaller institutions.
+
+A second meaningful insight is that the lowest performing schools generally spent more per student than the highest performing
+schools. This suggests that increased funding does not necessarily lead to higher academic performance, and suggests that
+additional research should be done into the differential allocation of funds between schools with high and low performance.
+
+One other very notable insight, was that Charter Schools performed consistently higher across all metrics compared to District
+Schools with the most pronounced difference in Math Pass Rate with 66.55% for District Schools and 93.62% for Charter Schools,
+and in Overall Pass Rate with 53.67% for District Schools and 90.43% for Charter Schools. This difference could be related to
+differing sizes of these two types of schools, different allocations of funding, or the practice of some Charter Schools to 
+recruit high-performing students, but would require additional research to confirm.
+
