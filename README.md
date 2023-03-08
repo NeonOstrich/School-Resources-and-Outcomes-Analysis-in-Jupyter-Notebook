@@ -1,4 +1,4 @@
-# Pandas Challenge
+# School Resources and Outcomes Analysis
 
 This is an assignment that I completed for the George Washington University Data Analytics Bootcamp, focused on analysis in Python using Jupyter Notebook and displaying my understanding of Pandas.
 
