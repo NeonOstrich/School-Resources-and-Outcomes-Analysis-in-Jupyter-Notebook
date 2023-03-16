@@ -33,7 +33,9 @@ Scores by School Size
 
 Scores by School Type
 
+<img width="1082" alt="Screen Shot 2023-03-16 at 12 35 39 PM" src="https://user-images.githubusercontent.com/119632669/225691493-1c7bb5fe-2f19-4c66-a15f-e3d01d3df893.png">
 
+<img width="1144" alt="Screen Shot 2023-03-16 at 12 39 50 PM" src="https://user-images.githubusercontent.com/119632669/225691574-0762d1cf-bfcd-4c06-8e4d-0837d89fe0f6.png">
 ## Insights
 
 One meaningful insight that can be observed in this data is that "Large Schools" (2000-5000 students) performed noticably more
