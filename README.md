@@ -5,7 +5,7 @@ This is an assignment that I completed for the George Washington University Data
 
 ## Organization
 
-Within "pandas-challenge" you will find this "README.md" file which provides an explanation of my analysis. You will also find the
+Within this repository you will find this "README.md" file which provides an explanation of my analysis. You will also find the
 folder, "PyCitySchools" which contains my Python code in a Jupyter Notebook file, as well as a "Resources" folder. The "Resources"
 folder contains two documents "schools_complete.csv" and "students_complete.csv" which are used in this analysis.
 
